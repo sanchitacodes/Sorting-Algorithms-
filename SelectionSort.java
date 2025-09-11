@@ -1,8 +1,19 @@
+// What the Code Does:
+// Selection Sort is a simple comparison-based sorting algorithm.
+// It repeatedly selects the minimum element from the unsorted portion
+// and swaps it with the first unsorted element.
+// After each pass, the boundary between sorted and unsorted grows by one.
+// Time Complexity: Best O(n²), Average O(n²), Worst O(n²).
+// Space Complexity: O(1) (in-place).
+// Not stable by default.
+
 public class SelectionSort {
     public static void selectionSort(int[] arr) {
-        for (int i = 0; i < arr.length - 1; i++) {
+        int n = arr.length;
+
+        for (int i = 0; i < n - 1; i++) {
             int minIndex = i;
-            for (int j = i + 1; j < arr.length; j++) {
+            for (int j = i + 1; j < n; j++) {
                 if (arr[j] < arr[minIndex]) {
                     minIndex = j;
                 }
@@ -12,6 +23,23 @@ public class SelectionSort {
             arr[minIndex] = temp;
         }
     }
-}
 
-// Time: Best O(n²), Avg O(n²), Worst O(n²)
+    public static void printArray(int[] arr) {
+        for (int num : arr) {
+            System.out.print(num + " ");
+        }
+        System.out.println();
+    }
+    
+    public static void main(String[] args) {
+        int[] arr = {64, 25, 12, 22, 11};
+
+        System.out.println("Original array:");
+        printArray(arr);
+
+        selectionSort(arr);
+
+        System.out.println("Sorted array:");
+        printArray(arr);
+    }
+}
