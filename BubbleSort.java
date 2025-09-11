@@ -4,8 +4,6 @@
 // After each pass, the largest element “bubbles up” to its correct position at the end.
 // The optimization swapped stops early if the array becomes sorted before completing all passes.
 
-// Time: Best O(n), Avg O(n²), Worst O(n²)
-
 public class BubbleSort {
     public static void bubbleSort(int[] arr) {
         for (int i = 0; i < arr.length - 1; i++) {
