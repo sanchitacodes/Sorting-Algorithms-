@@ -4,7 +4,7 @@
 // Each new element (the "key") is compared with the already sorted part of the array,
 // and inserted into its correct position by shifting larger elements to the right.
 
-
+//
 public class InsertionSort {
     public static void insertionSort(int[] arr) {
         for (int i = 1; i < arr.length; i++) {
