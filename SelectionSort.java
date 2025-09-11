@@ -5,7 +5,7 @@
 // After each pass, the boundary between sorted and unsorted grows by one.
 
 // Space Complexity: O(1) (in-place).
-// Not stable by default.
+// Not stable by default. //
 
 public class SelectionSort {
     public static void selectionSort(int[] arr) {
