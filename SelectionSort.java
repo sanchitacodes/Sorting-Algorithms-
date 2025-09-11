@@ -3,7 +3,7 @@
 // It repeatedly selects the minimum element from the unsorted portion
 // and swaps it with the first unsorted element.
 // After each pass, the boundary between sorted and unsorted grows by one.
-// Time Complexity: Best O(n²), Average O(n²), Worst O(n²).
+
 // Space Complexity: O(1) (in-place).
 // Not stable by default.
 
