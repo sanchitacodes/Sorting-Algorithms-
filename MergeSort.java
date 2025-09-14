@@ -1,3 +1,10 @@
+// What the Code Does:
+// Merge Sort is a classic divide-and-conquer sorting algorithm.
+// It works by recursively dividing the array into two halves until each subarray 
+// contains only one element (which is inherently sorted).
+// Then, it merges the subarrays back together in sorted order.
+// The merging step ensures that the result is a fully sorted array.
+
 public class MergeSort {
     public static void mergeSort(int[] arr, int l, int r) {
         if (l < r) {
@@ -28,6 +35,24 @@ public class MergeSort {
         }
         while (i < n1) arr[k++] = left[i++];
         while (j < n2) arr[k++] = right[j++];
+    }
+
+    private static void printArray(int[] arr) {
+        for (int num : arr) {
+            System.out.print(num + " ");
+        }
+        System.out.println();
+    }
+
+    public static void main(String[] args) {
+        int[] arr = {12, 11, 13, 5, 6, 7};
+        System.out.println("Original Array:");
+        printArray(arr);
+
+        mergeSort(arr, 0, arr.length - 1);
+
+        System.out.println("Sorted Array:");
+        printArray(arr);
     }
 }
 
